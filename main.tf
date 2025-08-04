@@ -1,11 +1,13 @@
 provider "aws" {
 region = "ap-south-1"
+access_key= "AKIAWTUKACXDJTXTSEPT"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
   ami             = "ami-0f1dcc636b69a6438"
   instance_type   = "t2.micro"
-  key_name        = "TERRA-PY"
+  key_name        = "testserver1"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
